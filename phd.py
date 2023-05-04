@@ -93,7 +93,7 @@ class TRF:
             except AttributeError:
                 pass
             
-            self.Resolution_int = int(round(self.Resolution * 1e3, 0))
+            self.Resolution_int = self.Resolution * 1e3
             self.x = [i * self.Resolution for i in range(len(self.Counts))]
     
     def _from_txt(self, path):
