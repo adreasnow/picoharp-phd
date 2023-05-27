@@ -170,6 +170,4 @@ class TRF:
             for i in range(self.Crv.Channels):
                 self.Counts += [struct.unpack('I', f.read(4))[0]]
             self._x_y()
-
-            
             return

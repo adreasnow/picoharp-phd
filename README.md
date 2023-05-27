@@ -8,6 +8,12 @@ Both of these are easy to modify, however the scope of this projec tis limited t
 
 The module also loads `.txt` files which are the copy-pasted data from the PicoHarp software. This is primary way our research group has extracted data in the past, so it makes sense to keep the functionality alive.
 
+## Installation
+
+```bash
+pip install phdimporter
+```
+
 ## Usage
 
 The module only uses one `struct` import and contains one class of importance, `TRF`.
