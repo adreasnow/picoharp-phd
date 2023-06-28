@@ -79,7 +79,8 @@ class Brd:
         self.RtCh_4 = RtCh(f)
 
 class TRF:
-    def __init__(self, path):
+    def __init__(self, path, binSize = 0.0):
+        self.binSize = binSize
         if path[-4:] in ['.txt', '.asc']:
             self._from_txt(path)
         elif path[-4:] == '.phd':
@@ -107,7 +108,7 @@ class TRF:
                 break
             elif 'Version : 1 920 M' in line:
                 startline = 10
-                binSize = 0
+                binSize = self.binSize
                 break
 
         self.Counts = []

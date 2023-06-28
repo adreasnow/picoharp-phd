@@ -8,6 +8,8 @@ Both of these are easy to modify, however the scope of this projec tis limited t
 
 The module also loads `.txt` files which are the copy-pasted data from the PicoHarp software. This is primary way our research group has extracted data in the past, so it makes sense to keep the functionality alive.
 
+For our friends at the University of Saskatchewan, I've also added `.asc` file loading.
+
 ## Installation
 
 ```bash
