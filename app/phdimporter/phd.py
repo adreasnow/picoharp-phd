@@ -80,7 +80,7 @@ class Brd:
 
 class TRF:
     def __init__(self, path):
-        if path[-4:] == '.txt':
+        if path[-4:] in ['.txt', '.asc']:
             self._from_txt(path)
         elif path[-4:] == '.phd':
             self._from_phd(path)
@@ -104,6 +104,11 @@ class TRF:
             if '#PicoHarp 300' in line:
                 startLine = 10
                 binSize = int(float(lines[8]) * 1e3)
+                break
+            elif 'Version : 1 920 M' in line:
+                startline = 10
+                binSize = 0
+                break
 
         self.Counts = []
         for line in lines[startLine:]:
